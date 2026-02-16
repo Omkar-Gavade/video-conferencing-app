@@ -1,11 +1,12 @@
 import { Router } from "express";
+import { login, registor } from "../controllers/userController.js";
 
 
 
 const router = Router();
 
-router.route("/login")
-router.route("/register")
+router.route("/login").post(login)
+router.route("/register").post(registor)
 router.route("/add_to_activity")
 router.route("/get_all_activity")
 
